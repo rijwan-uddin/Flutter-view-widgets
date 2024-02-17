@@ -7,6 +7,17 @@ class ListviewExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    List <String> items = List.generate(100, (index) =>'Item ${index+1}' );
+    return Scaffold(
+
+      appBar: AppBar(title: Text('List view'),),
+      body: ListView(
+        children:items.map((e)=>Text(e)).toList(),
+      ),
+
+
+
+
+    );
   }
 }
